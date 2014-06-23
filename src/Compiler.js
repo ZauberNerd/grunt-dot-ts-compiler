@@ -152,7 +152,7 @@ Compiler.prototype.compileTemplates = function(files) {
 
   var js = '', _this = this;
 
-  js =+ 'export var ' + this.opt.variable
+  js += 'export var ' + this.opt.variable
       + ': { [name: string]: (any) => string } = {};' + grunt.util.linefeed;
 
   files.map(function(filePath) {

@@ -1,17 +1,17 @@
 {
   "name": "grunt-dot-ts-compiler",
-  "description": "Grunt task for compiling doT templates in Typescript.",
+  "description": "Grunt task for compiling doT templates in Typescript. Based on Tingan Ho's grunt-dot-compiler.",
   "version": "0.1.0",
   "homepage": "https://github.com/ZauberNerd/grunt-dot-ts-compiler",
   "private": "true",
   "author": {
-    "name": "Bjoern Brauer",
-    "email": "bjoernjohannes@gmail.com"
+    "name": "Tingan Ho",
+    "email": "tingan87@gmail.com"
   },
   "contributors": [
     {
-      "name": "Tingan Ho",
-      "email": "tingan87@gmail.com"
+      "name": "Bjoern Brauer",
+      "email": "bjoernjohannes@gmail.com"
     }
   ],
   "repository": {

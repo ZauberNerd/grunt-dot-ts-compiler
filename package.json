@@ -1,11 +1,12 @@
 {
-  "name": "grunt-dot-compiler",
-  "description": "Grunt task for compiling doT templates",
-  "version": "0.5.12",
-  "homepage": "https://github.com/tinganho/grunt-dot",
+  "name": "grunt-dot-ts-compiler",
+  "description": "Grunt task for compiling doT templates in Typescript.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ZauberNerd/grunt-dot-ts-compiler",
+  "private": "true",
   "author": {
-    "name": "Tingan Ho",
-    "email": "tingan87@gmail.com"
+    "name": "Bjoern Brauer",
+    "email": "bjoernjohannes@gmail.com"
   },
   "contributors": [
     {
@@ -15,15 +16,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com:tinganho/grunt-dot-compiler.git"
+    "url": "git://github.com:ZauberNerd/grunt-dot-ts-compiler.git"
   },
   "bugs": {
-    "url": "https://github.com/tinganho/grunt-dot-compiler/issues"
+    "url": "https://github.com/ZauberNerd/grunt-dot-ts-compiler/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/tinganho/grunt-dot-compiler/blob/master/LICENSE-MIT"
+      "url": "https://github.com/ZauberNerd/grunt-dot-ts-compiler/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
@@ -49,6 +50,7 @@
     "gruntplugin",
     "dot",
     "template",
-    "templates"
+    "templates",
+    "typescript"
   ]
 }

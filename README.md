@@ -1,14 +1,14 @@
-# grunt-dot-compiler [![Build Status](https://travis-ci.org/tinganho/grunt-dot-compiler.png)](https://travis-ci.org/tinganho/grunt-dot-compiler)
+# grunt-dot-ts-compiler
 
-Compiles doT templates ready for RequireJS
+Compiles doT templates ready for Typescript
 
 ## Getting Started
-Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-dot-compiler`
+Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-dot-ts-compiler`
 
 Then add this line to your project's `grunt.js` gruntfile:
 
 ```javascript
-grunt.loadNpmTasks('grunt-dot-compiler');
+grunt.loadNpmTasks('grunt-dot-ts-compiler');
 ```
 
 [grunt]: http://gruntjs.com/
@@ -25,7 +25,7 @@ given the following config and template
         root     : __dirname + '/app/profiles'
       },
       src  : ['app/**/*.dot'],
-      dest : 'app/public/templates/tmpl.js'
+      dest : 'app/public/templates/tmpl.ts'
     }
   }
 ```
@@ -33,8 +33,6 @@ given the following config and template
 ### Options
 * variable String Variable to store everything
 * root String Root of the project
-* requirejs Boolean Enable RequireJS
-* node Boolean Enable Node
 
 ### templates
 #### templates/item.dot
@@ -45,18 +43,12 @@ given the following config and template
 ```
 
 will output the following script file
-#### dist/tmpl.js
-```javascript
-if( typeof define !== "function" ) {
-  define = require( "amdefine" )( module )
+#### dist/tmpl.ts
+```typescript
+export var tmpl: { [name: string]: (any) => string } = {};
+tmpl['item'] = function anonymous(it) {
+  var out='<li><a href="'+(it.url)+'"></a></li>';return out;
 }
-define(function() {
-  var tmpl=tmpl|| {};
-  tmpl['item']=function anonymous(it) {
-    var out='<li><a href="'+(it.url)+'"></a></li>';return out;
-  }
-  return tmpl;
-});
 ```
 
 ### Partials
@@ -64,7 +56,7 @@ You can load partials with the `load` command
 ```javascript
   {{##def.partial1: load('./partial1.part') #}} // Use relative paths
   {{##def.partial2: load('test/example/partial2.part') #}} // Use options.root
-  
+
   <div>
     {{#def.partial1}}
     {{#def.partial2}}
@@ -97,7 +89,7 @@ And the output will be:
 <div class="some-css-class"></div>
 ```
 #### Partials-in-partials
-You can now create partials in partials and Grunt-dot-compiler will do the mgic for you.
+You can now create partials in partials and Grunt-dot-ts-compiler will do the mgic for you.
 
 ## License
 Copyright (c) 2012 Tingan Ho

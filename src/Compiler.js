@@ -158,7 +158,7 @@ Compiler.prototype.compileTemplates = function(files) {
 
   files.map(function(filePath) {
     var template = _this.getFileContent(filePath)
-      , fn       = doT.template(template, this.opt.dotOptions)
+      , fn       = doT.template(template, _this.opt.dotOptions)
       , key      = _this.opt.key(filePath);
     js += 'tmpl' + "['" + key + "'] = " + fn + ';' + grunt.util.linefeed;
   });

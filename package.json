@@ -35,7 +35,7 @@
     "test": "bin/test"
   },
   "dependencies": {
-    "dot": "https://github.com/ZauberNerd/doT/archive/1.2.0.tar.gz",
+    "dot": "https://github.com/ZauberNerd/doT/archive/1.2.1.tar.gz",
     "grunt": "~0.4.1",
     "findup-sync": "~0.1.2",
     "requirejs": "~2.1.5",
